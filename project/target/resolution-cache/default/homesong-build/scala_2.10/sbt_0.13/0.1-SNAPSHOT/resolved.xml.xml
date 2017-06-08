@@ -4,8 +4,8 @@
 		module="homesong-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170607181705"
-		e:sbtVersion="0.13" e:scalaVersion="2.10"
+		publication="20170607183652"
+		e:scalaVersion="2.10" e:sbtVersion="0.13"
 	>
 		<description>
 		homesong-build
