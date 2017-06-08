@@ -1,4 +1,13 @@
+// -*- mode: Scala;-*- 
+// Filename:    Main.scala 
+// Authors:     luciusmeredith                                                    
+// Creation:    Wed Jun  7 19:20:29 2017 
+// Copyright:   Not supplied 
+// Description: 
+// ------------------------------------------------------------------------
+
 package com.akbarsgrasp.homesong
+
 object Main extends App {
   println("Hello, World!")
   @inline def defined(line: String) = {
