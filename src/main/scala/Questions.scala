@@ -8,14 +8,12 @@
 
 package com.akbarsgrasp.homesong
 
-trait QuestionT {
-  def songName : String = ""
-}
+trait QuestionT
 
-case class GetSongInfo( override val songName : String ) extends QuestionT
-case class GetMotifs( override val songName : String ) extends QuestionT
-case class GetComposers( override val songName : String ) extends QuestionT
-case class GetBPM( override val songName : String ) extends QuestionT
-case class GetLink( override val songName : String ) extends QuestionT
-case class GetTimesignature( override val songName : String ) extends QuestionT
+case class GetSongInfo( override val songName : String ) extends NamedSongT with QuestionT
+case class GetMotifs( override val songName : String ) extends NamedSongT with QuestionT
+case class GetComposers( override val songName : String ) extends NamedSongT with QuestionT
+case class GetBPM( override val songName : String ) extends NamedSongT with QuestionT
+case class GetLink( override val songName : String ) extends NamedSongT with QuestionT
+case class GetTimesignature( override val songName : String ) extends NamedSongT with QuestionT
 

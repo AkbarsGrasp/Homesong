@@ -13,7 +13,7 @@ object Main extends App {
   @inline def defined(line: String) = {
      line != null && line.nonEmpty
   }
-  def processCmd( q : QuestionT ) : Unit = {
+  def processQuery( q : NamedSongT with QuestionT ) : Unit = {
     println( s"""should process q for ${q.songName}""" )
   }
   def readUserQuery() : Unit = {
@@ -35,9 +35,9 @@ object Main extends App {
           try { 
             val cmd :: name :: Nil = l.split( " " ).toList
             cmd match {
-              case "info" => processCmd( GetSongInfo( name ) )
-              case "motifs" => processCmd( GetMotifs( name ) )
-              case "composers" => processCmd( GetComposers( name ) )
+              case "info" => processQuery( GetSongInfo( name ) )
+              case "motifs" => processQuery( GetMotifs( name ) )
+              case "composers" => processQuery( GetComposers( name ) )
               case _ => throw new Exception( "" )
             }
           }
